@@ -1,0 +1,20 @@
+{
+  "name": "@hexlet/code",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "My first project on Hexlet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bobronaud/frontend-project-44.git"
+  },
+  "author": "Alexander Bobrikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bobronaud/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/Bobronaud/frontend-project-44#readme"
+}
