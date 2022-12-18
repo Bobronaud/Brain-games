@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "type": "module",
   "bin": {
-	  "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js"
   },
   "version": "1.0.0",
   "description": "My first project on Hexlet",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Bobronaud/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/Bobronaud/frontend-project-44#readme"
+  "homepage": "https://github.com/Bobronaud/frontend-project-44#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
