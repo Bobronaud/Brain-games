@@ -2,7 +2,8 @@
   "name": "@hexlet/code",
   "type": "module",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "version": "1.0.0",
   "description": "My first project on Hexlet",
