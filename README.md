@@ -5,3 +5,6 @@
 
 **Askinema of Brain-calc with an example of installing the package, starting the game, winning and losing the player.**
 [![asciicast](https://asciinema.org/a/548087.svg)](https://asciinema.org/a/548087)
+
+**Askinema of Brain-gcd with an example of installing the package, starting the game, winning and losing the player.**
+[![asciicast](https://asciinema.org/a/548126.svg)](https://asciinema.org/a/548126)
