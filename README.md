@@ -8,3 +8,6 @@
 
 **Askinema of Brain-gcd with an example of installing the package, starting the game, winning and losing the player.**
 [![asciicast](https://asciinema.org/a/548126.svg)](https://asciinema.org/a/548126)
+
+**Askinema of Brain-progression with an example of installing the package, starting the game, winning and losing the player.**
+[![asciicast](https://asciinema.org/a/548738.svg)](https://asciinema.org/a/548738)
