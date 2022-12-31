@@ -11,3 +11,6 @@
 
 **Askinema of Brain-progression with an example of installing the package, starting the game, winning and losing the player.**
 [![asciicast](https://asciinema.org/a/548738.svg)](https://asciinema.org/a/548738)
+
+**Askinema of Brain-prime with an example of installing the package, starting the game, winning and losing the player.**
+[![asciicast](https://asciinema.org/a/548862.svg)](https://asciinema.org/a/548862)
