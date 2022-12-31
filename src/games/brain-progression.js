@@ -23,8 +23,8 @@ const toGetRightAnswer = (questionValue) => {
   const progression = questionValue.split(' ');
   let i = 0;
   let result;
-  for (const item of progression) {
-    if (item === '..') {
+  while (i < progression.length) {
+    if (progression[i] === '..') {
       if (i === 0) {
         const stepValue = progression[i + 2] - progression[i + 1];
         result = Number(progression[1]) - stepValue;
