@@ -4,7 +4,7 @@ import toGetRandomNumber from '../toGetRandomNumber.js';
 const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const toGenerateQuestionValue = () => {
-  const number = toGetRandomNumber(1, 409);
+  const number = toGetRandomNumber(2, 409);
   return number;
 };
 
