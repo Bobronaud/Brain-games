@@ -8,8 +8,8 @@ const toGetRandomNumber = (min, max) => {
 };
 
 const toGenerateQuestionValue = () => {
-  const rundomFirstNumber = toGetRandomNumber(0, 101);
-  const rundomSecondNumber = toGetRandomNumber(0, 101);
+  const rundomFirstNumber = toGetRandomNumber(0, 100);
+  const rundomSecondNumber = toGetRandomNumber(0, 100);
   return `${rundomFirstNumber} ${rundomSecondNumber}`;
 };
 
