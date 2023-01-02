@@ -1,11 +1,12 @@
 import toLaunchGame from '../index.js';
+import toGetRandomNumber from '../toGetRandomNumber.js';
 
 const condition = 'What is the result of the expression?';
 const toGenerateQuestionValue = () => {
   const sings = ['+', '-', '*'];
-  const randomSing = sings[Math.floor(Math.random() * 3)];
-  const rundomFirstNumber = Math.floor(Math.random() * 11);
-  const rundomSecondNumber = Math.floor(Math.random() * 11);
+  const randomSing = sings[toGetRandomNumber(1, 3)];
+  const rundomFirstNumber = toGetRandomNumber(1, 101);
+  const rundomSecondNumber = toGetRandomNumber(1, 101);
   return `${rundomFirstNumber} ${randomSing} ${rundomSecondNumber}`;
 };
 

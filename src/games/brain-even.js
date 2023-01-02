@@ -1,8 +1,9 @@
 import toLaunchGame from '../index.js';
+import toGetRandomNumber from '../toGetRandomNumber.js';
 
 const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
 const toGenerateQuestionValue = () => {
-  const number = Math.floor(Math.random() * 101);
+  const number = toGetRandomNumber(1, 101);
   return number;
 };
 

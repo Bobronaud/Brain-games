@@ -1,11 +1,7 @@
 import toLaunchGame from '../index.js';
+import toGetRandomNumber from '../toGetRandomNumber.js';
 
 const condition = 'What number is missing in the progression?';
-
-const toGetRandomNumber = (min, max) => {
-  const randomNnumber = Math.random() * (max - min) + min;
-  return Math.floor(randomNnumber);
-};
 
 const toGenerateQuestionValue = () => {
   const progression = [toGetRandomNumber(1, 20)];

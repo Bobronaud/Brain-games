@@ -1,15 +1,11 @@
 import toLaunchGame from '../index.js';
+import toGetRandomNumber from '../toGetRandomNumber.js';
 
 const condition = 'Find the greatest common divisor of given numbers.';
 
-const toGetRandomNumber = (min, max) => {
-  const randomNnumber = Math.random() * (max - min) + min;
-  return Math.floor(randomNnumber);
-};
-
 const toGenerateQuestionValue = () => {
-  const rundomFirstNumber = toGetRandomNumber(0, 100);
-  const rundomSecondNumber = toGetRandomNumber(0, 100);
+  const rundomFirstNumber = toGetRandomNumber(1, 100);
+  const rundomSecondNumber = toGetRandomNumber(1, 100);
   return `${rundomFirstNumber} ${rundomSecondNumber}`;
 };
 
