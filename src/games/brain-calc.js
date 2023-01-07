@@ -27,6 +27,7 @@ const getRightAnswer = (questionValue) => {
       rightAnswer = firstNumber * secondNumber;
       break;
     default:
+      console.log(`Unknown sing: '${sing}'!`);
   }
   return rightAnswer.toString();
 };
