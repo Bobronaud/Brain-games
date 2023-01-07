@@ -8,13 +8,18 @@ const generateQuestionValue = () => {
   return number;
 };
 
-const getRightAnswer = (questionValue) => {
+const isPrime = (questionValue) => {
   let result = 'yes';
   for (let i = 2; i < questionValue; i += 1) {
     if (questionValue % i === 0) {
       result = 'no';
     }
   }
+  return result;
+};
+
+const getRightAnswer = (questionValue) => {
+  const result = isPrime(questionValue);
   return result;
 };
 
