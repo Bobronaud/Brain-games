@@ -10,11 +10,7 @@ const generateQuestionValue = () => {
   return `${rundomFirstNumber} ${randomSing} ${rundomSecondNumber}`;
 };
 
-const getRightAnswer = (questionValue) => {
-  const expression = questionValue.split(' ');
-  const sing = expression[1];
-  const firstNumber = Number(expression[0]);
-  const secondNumber = Number(expression[2]);
+const calculate = (sing, firstNumber, secondNumber) => {
   let rightAnswer;
   switch (sing) {
     case '+':
@@ -29,7 +25,16 @@ const getRightAnswer = (questionValue) => {
     default:
       console.log(`Unknown sing: '${sing}'!`);
   }
-  return rightAnswer.toString();
+  return rightAnswer;
+};
+
+const getRightAnswer = (questionValue) => {
+  const expression = questionValue.split(' ');
+  const sing = expression[1];
+  const firstNumber = Number(expression[0]);
+  const secondNumber = Number(expression[2]);
+  const result = calculate(sing, firstNumber, secondNumber);
+  return result.toString();
 };
 
 const launchBrainCalc = () => launchGame(condition, generateQuestionValue, getRightAnswer);
