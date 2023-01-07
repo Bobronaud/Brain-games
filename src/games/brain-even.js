@@ -1,13 +1,13 @@
-import toLaunchGame from '../index.js';
-import toGetRandomNumber from '../toGetRandomNumber.js';
+import launchGame from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
-const toGenerateQuestionValue = () => {
-  const number = toGetRandomNumber(1, 101);
+const generateQuestionValue = () => {
+  const number = getRandomNumber(1, 101);
   return number;
 };
 
-const toGetRightAnswer = (questionValue) => {
+const getRightAnswer = (questionValue) => {
   let result;
   if (questionValue % 2 === 0) {
     result = 'yes';
@@ -15,6 +15,6 @@ const toGetRightAnswer = (questionValue) => {
   return result;
 };
 
-const evenGame = () => toLaunchGame(condition, toGenerateQuestionValue, toGetRightAnswer);
+const launchEvenGame = () => launchGame(condition, generateQuestionValue, getRightAnswer);
 
-export default evenGame;
+export default launchEvenGame;

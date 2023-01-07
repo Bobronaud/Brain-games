@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-const brainGames = () => {
+const launchBrainGames = () => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 };
 
-export default brainGames;
+export default launchBrainGames;

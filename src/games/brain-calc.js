@@ -1,16 +1,16 @@
-import toLaunchGame from '../index.js';
-import toGetRandomNumber from '../toGetRandomNumber.js';
+import launchGame from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const condition = 'What is the result of the expression?';
-const toGenerateQuestionValue = () => {
+const generateQuestionValue = () => {
   const sings = ['+', '-', '*'];
-  const randomSing = sings[toGetRandomNumber(1, 3)];
-  const rundomFirstNumber = toGetRandomNumber(1, 101);
-  const rundomSecondNumber = toGetRandomNumber(1, 101);
+  const randomSing = sings[getRandomNumber(1, 3)];
+  const rundomFirstNumber = getRandomNumber(1, 101);
+  const rundomSecondNumber = getRandomNumber(1, 101);
   return `${rundomFirstNumber} ${randomSing} ${rundomSecondNumber}`;
 };
 
-const toGetRightAnswer = (questionValue) => {
+const getRightAnswer = (questionValue) => {
   const expression = questionValue.split(' ');
   const sing = expression[1];
   const firstNumber = Number(expression[0]);
@@ -31,6 +31,6 @@ const toGetRightAnswer = (questionValue) => {
   return rightAnswer.toString();
 };
 
-const brainCalc = () => toLaunchGame(condition, toGenerateQuestionValue, toGetRightAnswer);
+const launchBrainCalc = () => launchGame(condition, generateQuestionValue, getRightAnswer);
 
-export default brainCalc;
+export default launchBrainCalc;

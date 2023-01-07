@@ -1,15 +1,15 @@
 import readlineSync from 'readline-sync';
 
-const toLaunchGame = (condition, toGenerateQuestionValue, toGetRightAnswer) => {
+const launchGame = (condition, generateQuestionValue, getRightAnswer) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(condition);
   let i = 0;
   while (i < 3) {
-    const currentQuestionValue = toGenerateQuestionValue();
+    const currentQuestionValue = generateQuestionValue();
     console.log(`Question: ${currentQuestionValue}`);
-    const currentRightAnswer = toGetRightAnswer(currentQuestionValue);
+    const currentRightAnswer = getRightAnswer(currentQuestionValue);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === currentRightAnswer) {
       console.log('Correct!');
@@ -24,4 +24,4 @@ const toLaunchGame = (condition, toGenerateQuestionValue, toGetRightAnswer) => {
   }
 };
 
-export default toLaunchGame;
+export default launchGame;

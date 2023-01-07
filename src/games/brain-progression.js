@@ -1,21 +1,21 @@
-import toLaunchGame from '../index.js';
-import toGetRandomNumber from '../toGetRandomNumber.js';
+import launchGame from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const condition = 'What number is missing in the progression?';
 
-const toGenerateQuestionValue = () => {
-  const progression = [toGetRandomNumber(1, 20)];
-  const progressionStep = toGetRandomNumber(2, 12);
-  const progressionLength = toGetRandomNumber(6, 10);
+const generateQuestionValue = () => {
+  const progression = [getRandomNumber(1, 20)];
+  const progressionStep = getRandomNumber(2, 12);
+  const progressionLength = getRandomNumber(6, 10);
   while (progression.length < progressionLength) {
     const nextNumber = progression.at(-1) + progressionStep;
     progression.push(nextNumber);
   }
-  progression[toGetRandomNumber(0, progressionLength)] = '..';
+  progression[getRandomNumber(0, progressionLength)] = '..';
   return progression.join(' ');
 };
 
-const toGetRightAnswer = (questionValue) => {
+const getRightAnswer = (questionValue) => {
   const progression = questionValue.split(' ');
   let i = 0;
   let result;
@@ -37,6 +37,6 @@ const toGetRightAnswer = (questionValue) => {
   return result.toString();
 };
 
-const brainProgression = () => toLaunchGame(condition, toGenerateQuestionValue, toGetRightAnswer);
+const launchBrainProgression = () => launchGame(condition, generateQuestionValue, getRightAnswer);
 
-export default brainProgression;
+export default launchBrainProgression;

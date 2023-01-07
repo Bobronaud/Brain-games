@@ -1,14 +1,14 @@
-import toLaunchGame from '../index.js';
-import toGetRandomNumber from '../toGetRandomNumber.js';
+import launchGame from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const toGenerateQuestionValue = () => {
-  const number = toGetRandomNumber(2, 409);
+const generateQuestionValue = () => {
+  const number = getRandomNumber(2, 409);
   return number;
 };
 
-const toGetRightAnswer = (questionValue) => {
+const getRightAnswer = (questionValue) => {
   let result = 'yes';
   for (let i = 2; i < questionValue; i += 1) {
     if (questionValue % i === 0) {
@@ -18,6 +18,6 @@ const toGetRightAnswer = (questionValue) => {
   return result;
 };
 
-const brainPrime = () => toLaunchGame(condition, toGenerateQuestionValue, toGetRightAnswer);
+const launchBrainPrime = () => launchGame(condition, generateQuestionValue, getRightAnswer);
 
-export default brainPrime;
+export default launchBrainPrime;

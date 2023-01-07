@@ -1,6 +1,6 @@
-const toGetRandomNumber = (min, max) => {
+const getRandomNumber = (min, max) => {
   const randomNnumber = Math.random() * (max - min) + min;
   return Math.floor(randomNnumber);
 };
 
-export default toGetRandomNumber;
+export default getRandomNumber;

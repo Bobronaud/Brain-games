@@ -1,15 +1,15 @@
-import toLaunchGame from '../index.js';
-import toGetRandomNumber from '../toGetRandomNumber.js';
+import launchGame from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const condition = 'Find the greatest common divisor of given numbers.';
 
-const toGenerateQuestionValue = () => {
-  const rundomFirstNumber = toGetRandomNumber(1, 100);
-  const rundomSecondNumber = toGetRandomNumber(1, 100);
+const generateQuestionValue = () => {
+  const rundomFirstNumber = getRandomNumber(1, 100);
+  const rundomSecondNumber = getRandomNumber(1, 100);
   return `${rundomFirstNumber} ${rundomSecondNumber}`;
 };
 
-const toGetRightAnswer = (questionValue) => {
+const getRightAnswer = (questionValue) => {
   const numbers = questionValue.split(' ');
   let firstNumber = numbers[0];
   let secondNumber = numbers[1];
@@ -24,6 +24,6 @@ const toGetRightAnswer = (questionValue) => {
   return secondNumber.toString();
 };
 
-const brainGcd = () => toLaunchGame(condition, toGenerateQuestionValue, toGetRightAnswer);
+const launchBrainGcd = () => launchGame(condition, generateQuestionValue, getRightAnswer);
 
-export default brainGcd;
+export default launchBrainGcd;
