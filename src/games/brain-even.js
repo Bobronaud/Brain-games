@@ -7,11 +7,16 @@ const generateQuestionValue = () => {
   return number;
 };
 
-const getRightAnswer = (questionValue) => {
+const isEven = (questionValue) => {
   let result;
   if (questionValue % 2 === 0) {
     result = 'yes';
   } else result = 'no';
+  return result;
+};
+
+const getRightAnswer = (questionValue) => {
+  const result = isEven(questionValue);
   return result;
 };
 
