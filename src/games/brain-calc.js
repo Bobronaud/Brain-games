@@ -4,7 +4,7 @@ import getRandomNumber from '../getRandomNumber.js';
 const condition = 'What is the result of the expression?';
 const generateQuestionValue = () => {
   const sings = ['+', '-', '*'];
-  const randomSing = sings[getRandomNumber(1, 3)];
+  const randomSing = sings[getRandomNumber(0, sings.length)];
   const rundomFirstNumber = getRandomNumber(1, 101);
   const rundomSecondNumber = getRandomNumber(1, 101);
   return `${rundomFirstNumber} ${randomSing} ${rundomSecondNumber}`;
