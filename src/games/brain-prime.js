@@ -3,11 +3,6 @@ import getRandomNumber from '../getRandomNumber.js';
 
 const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const generateQuestionValue = () => {
-  const number = getRandomNumber(2, 409);
-  return number;
-};
-
 const isPrime = (questionValue) => {
   let result = 'yes';
   for (let i = 2; i < questionValue; i += 1) {
@@ -18,11 +13,15 @@ const isPrime = (questionValue) => {
   return result;
 };
 
-const getRightAnswer = (questionValue) => {
-  const result = isPrime(questionValue);
+const generateRoundData = () => {
+  const result = [];
+  const number = getRandomNumber(2, 409);
+  result.push(number);
+  const rightAnswer = isPrime(number);
+  result.push(rightAnswer);
   return result;
 };
 
-const launchBrainPrime = () => launchGame(condition, generateQuestionValue, getRightAnswer);
+const launchBrainPrime = () => launchGame(condition, generateRoundData);
 
 export default launchBrainPrime;
