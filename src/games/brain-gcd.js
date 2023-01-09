@@ -3,12 +3,6 @@ import getRandomNumber from '../getRandomNumber.js';
 
 const condition = 'Find the greatest common divisor of given numbers.';
 
-const generateQuestionValue = () => {
-  const rundomFirstNumber = getRandomNumber(1, 100);
-  const rundomSecondNumber = getRandomNumber(1, 100);
-  return `${rundomFirstNumber} ${rundomSecondNumber}`;
-};
-
 const calculateGcd = (firstNumber, secondNumber) => {
   let remainder;
   let firstDivisor = firstNumber;
@@ -23,14 +17,17 @@ const calculateGcd = (firstNumber, secondNumber) => {
   return secondDivisor;
 };
 
-const getRightAnswer = (questionValue) => {
-  const numbers = questionValue.split(' ');
-  const firstNumber = numbers[0];
-  const secondNumber = numbers[1];
-  const result = calculateGcd(firstNumber, secondNumber);
-  return result.toString();
+const generateRoundData = () => {
+  const result = [];
+  const rundomFirstNumber = getRandomNumber(1, 100);
+  const rundomSecondNumber = getRandomNumber(1, 100);
+  const question = `${rundomFirstNumber} ${rundomSecondNumber}`;
+  result.push(question);
+  const rightAnswer = calculateGcd(rundomFirstNumber, rundomSecondNumber);
+  result.push(rightAnswer.toString());
+  return result;
 };
 
-const launchBrainGcd = () => launchGame(condition, generateQuestionValue, getRightAnswer);
+const launchBrainGcd = () => launchGame(condition, generateRoundData);
 
 export default launchBrainGcd;
