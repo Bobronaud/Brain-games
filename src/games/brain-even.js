@@ -2,10 +2,6 @@ import launchGame from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
 const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
-const generateQuestionValue = () => {
-  const number = getRandomNumber(1, 101);
-  return number;
-};
 
 const isEven = (questionValue) => {
   let result;
@@ -15,11 +11,14 @@ const isEven = (questionValue) => {
   return result;
 };
 
-const getRightAnswer = (questionValue) => {
-  const result = isEven(questionValue);
+const generateRoundData = () => {
+  const result = [];
+  const number = getRandomNumber(1, 101);
+  result.push(number);
+  result.push(isEven(number));
   return result;
 };
 
-const launchEvenGame = () => launchGame(condition, generateQuestionValue, getRightAnswer);
+const launchEvenGame = () => launchGame(condition, generateRoundData);
 
 export default launchEvenGame;
