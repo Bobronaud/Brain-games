@@ -3,9 +3,7 @@ import getRandomNumber from '../getRandomNumber.js';
 
 const condition = 'What is the result of the expression?';
 
-const calculate = (expression) => {
-  const expressionAsArray = expression.split(' ');
-  const [firstNumber, sing, secondNumber] = expressionAsArray;
+const calculate = (firstNumber, sing, secondNumber) => {
   let rightAnswer;
   switch (sing) {
     case '+':
@@ -31,7 +29,7 @@ const generateRoundData = () => {
   const rundomSecondNumber = getRandomNumber(1, 101);
   const expression = `${rundomFirstNumber} ${randomSing} ${rundomSecondNumber}`;
   result.push(expression);
-  const rightAnswer = calculate(expression);
+  const rightAnswer = calculate(rundomFirstNumber, randomSing, rundomSecondNumber);
   result.push(rightAnswer.toString());
   return result;
 };
