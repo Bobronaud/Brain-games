@@ -3,16 +3,22 @@ import getRandomNumber from '../getRandomNumber.js';
 
 const condition = 'What number is missing in the progression?';
 
-const generateRoundData = () => {
-  const progression = [getRandomNumber(1, 20)];
-  const progressionStep = getRandomNumber(2, 12);
-  const progressionLength = getRandomNumber(6, 10);
-  while (progression.length < progressionLength) {
-    const nextNumber = progression.at(-1) + progressionStep;
+const generateProgression = (firstNumber, step, length) => {
+  const progression = [firstNumber];
+  while (progression.length < length) {
+    const nextNumber = progression.at(-1) + step;
     progression.push(nextNumber);
   }
+  return progression;
+};
+
+const generateRoundData = () => {
+  const firstNumber = getRandomNumber(1, 20);
+  const step = getRandomNumber(2, 12);
+  const length = getRandomNumber(6, 10);
+  const progression = generateProgression(firstNumber, step, length);
   const result = [];
-  const hiddenItem = getRandomNumber(0, progressionLength);
+  const hiddenItem = getRandomNumber(0, progression.length);
   const rightAnswer = progression[hiddenItem];
   progression[hiddenItem] = '..';
   result.push(progression.join(' '));
