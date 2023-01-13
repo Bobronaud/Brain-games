@@ -6,8 +6,8 @@ const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
 const isEven = (questionValue) => {
   let result;
   if (questionValue % 2 === 0) {
-    result = 'yes';
-  } else result = 'no';
+    result = true;
+  } else result = false;
   return result;
 };
 
@@ -15,7 +15,8 @@ const generateRoundData = () => {
   const result = [];
   const number = getRandomNumber(1, 101);
   result.push(number);
-  result.push(isEven(number));
+  const rightAnswer = isEven(number) ? 'yes' : 'no';
+  result.push(rightAnswer);
   return result;
 };
 
