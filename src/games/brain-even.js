@@ -3,13 +3,7 @@ import getRandomNumber from '../getRandomNumber.js';
 
 const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEven = (questionValue) => {
-  let result;
-  if (questionValue % 2 === 0) {
-    result = true;
-  } else result = false;
-  return result;
-};
+const isEven = (questionValue) => questionValue % 2 === 0;
 
 const generateRoundData = () => {
   const result = [];
