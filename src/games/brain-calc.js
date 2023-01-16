@@ -24,9 +24,9 @@ const calculate = (firstNumber, sing, secondNumber) => {
 const generateRoundData = () => {
   const result = [];
   const sings = ['+', '-', '*'];
-  const randomSing = sings[getRandomNumber(0, sings.length)];
-  const rundomFirstNumber = getRandomNumber(1, 101);
-  const rundomSecondNumber = getRandomNumber(1, 101);
+  const randomSing = sings[getRandomNumber(0, sings.length - 1)];
+  const rundomFirstNumber = getRandomNumber(1, 100);
+  const rundomSecondNumber = getRandomNumber(1, 100);
   const expression = `${rundomFirstNumber} ${randomSing} ${rundomSecondNumber}`;
   result.push(expression);
   const rightAnswer = calculate(rundomFirstNumber, randomSing, rundomSecondNumber);

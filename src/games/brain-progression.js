@@ -18,7 +18,7 @@ const generateRoundData = () => {
   const length = getRandomNumber(6, 10);
   const progression = generateProgression(firstNumber, step, length);
   const result = [];
-  const indexOfHiddenItem = getRandomNumber(0, progression.length);
+  const indexOfHiddenItem = getRandomNumber(0, progression.length - 1);
   const rightAnswer = progression[indexOfHiddenItem];
   progression[indexOfHiddenItem] = '..';
   result.push(progression.join(' '));
