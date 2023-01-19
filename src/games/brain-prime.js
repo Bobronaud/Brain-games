@@ -22,6 +22,6 @@ const generateRoundData = () => {
   return result;
 };
 
-const launchBrainPrime = () => launchGame(condition, generateRoundData);
+const launchBrainPrimeGame = () => launchGame(condition, generateRoundData);
 
-export default launchBrainPrime;
+export default launchBrainPrimeGame;

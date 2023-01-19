@@ -34,6 +34,6 @@ const generateRoundData = () => {
   return result;
 };
 
-const launchBrainCalc = () => launchGame(condition, generateRoundData);
+const launchBrainCalcGame = () => launchGame(condition, generateRoundData);
 
-export default launchBrainCalc;
+export default launchBrainCalcGame;

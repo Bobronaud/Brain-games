@@ -28,6 +28,6 @@ const generateRoundData = () => {
   return result;
 };
 
-const launchBrainGcd = () => launchGame(condition, generateRoundData);
+const launchBrainGcdGame = () => launchGame(condition, generateRoundData);
 
-export default launchBrainGcd;
+export default launchBrainGcdGame;

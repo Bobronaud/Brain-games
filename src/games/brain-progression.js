@@ -26,6 +26,6 @@ const generateRoundData = () => {
   return result;
 };
 
-const launchBrainProgression = () => launchGame(condition, generateRoundData);
+const launchBrainProgressionGame = () => launchGame(condition, generateRoundData);
 
-export default launchBrainProgression;
+export default launchBrainProgressionGame;

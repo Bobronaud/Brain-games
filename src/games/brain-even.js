@@ -11,6 +11,6 @@ const generateRoundData = () => {
   return [randomNumber, correctAnswer];
 };
 
-const launchEvenGame = () => launchGame(condition, generateRoundData);
+const launchBrainEvenGame = () => launchGame(condition, generateRoundData);
 
-export default launchEvenGame;
+export default launchBrainEvenGame;
